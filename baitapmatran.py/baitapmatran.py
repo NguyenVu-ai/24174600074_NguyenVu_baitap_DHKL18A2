@@ -33,3 +33,29 @@ for i in range(len(A)):
 print("Phép nhân ma trận:")
 for hang in C: 
     print(hang)
+
+
+
+    # Nhập số nguyên dương n
+n = int(input("Nhập số nguyên dương n: "))
+if n > 0 :
+    # Tính tử số: Tích từ k = 2 đến n + 4
+    numerator_product = 1
+    for k in range(2, n + 5):
+        numerator_product *= k
+
+    # Tính mẫu số: 1 + tổng các giá trị 1 / (tích từ i = 1 đến k - 1)
+    denominator_product = 1  # Bắt đầu với 1
+    for k in range(2, n + 5):
+        inner_product = 1
+        for i in range(1, k):
+            inner_product *= i
+        denominator_product += 1 / inner_product
+
+    # Tính giá trị của S
+    S = numerator_product / denominator_product
+
+    # In kết quả
+    print(f"Giá trị của S là: {S}")
+else:
+    print("Vui lòng nhập một số nguyên dương lớn hơn 0.")​11:31/-strong/-heart:>:o:-((:-h Xem trước khi gửiThả Files vào đây để xem lại trước khi gửi
